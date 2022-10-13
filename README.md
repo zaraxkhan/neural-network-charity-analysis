@@ -49,3 +49,6 @@ The final time around, I kept the fourth hidden layer and the reduced features s
 
 
 ## Summary
+With all the models. there was quite a significant amount of loss. Always about .552 which is more than half the data points. The accuracy score never reached above 73% which doesn't seem to be a good model for predictions. This model gave huge losses and not a significant accuracy score. Making the model less noisy may be helpful as there are many features that the organization finds important to look at that the machine leraning model finds difficult to group. 
+
+A good model to recommend is the Random Forest model because Random Forest is good for classification problems. It is better at dealing with outliers which may be why these neural networks were having a hard time reaching a good accuracy rate. 
