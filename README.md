@@ -13,8 +13,15 @@ From Alphabet Soup’s business team was received a CSV containing more than 34,
 ## Results
 ### Data PreProcessing
 - What variable(s) are considered the target(s) for your model?
+
+From the charity.csv dataset, the target for our model would be whether or not the organization chosen was successful or not. This means if the money given to the organization was used effectively or not. 
+
 - What variable(s) are considered to be the features for your model?
+In the first model, the variables I chose as features were the application type, affiliation, classification, use case of the money, organization of the company, status as active or not, the income amount of the organization, whether or not the organization was given special consideration, and finally the ask amount or funding amount requested.
+
 - What variable(s) are neither targets nor features, and should be removed from the input data
+
+I removed the EIN and Name of the organization as they were just identification columns and not anything that would help the machine classify whether or not they should recieve fundings. 
 
 ### Compiling, Training, and Evaluating the Model
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
