@@ -17,6 +17,7 @@ From Alphabet Soup’s business team was received a CSV containing more than 34,
 From the charity.csv dataset, the target for our model would be whether or not the organization chosen was successful or not. This means if the money given to the organization was used effectively or not. 
 
 - What variable(s) are considered to be the features for your model?
+
 In the first model, the variables I chose as features were the application type, affiliation, classification, use case of the money, organization of the company, status as active or not, the income amount of the organization, whether or not the organization was given special consideration, and finally the ask amount or funding amount requested.
 
 - What variable(s) are neither targets nor features, and should be removed from the input data
@@ -25,7 +26,26 @@ I removed the EIN and Name of the organization as they were just identification 
 
 ### Compiling, Training, and Evaluating the Model
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
+
+In the first model, I selected 2 hidden layers with 80 neurons in the first layer and 30 in the second. I chose relu as activation function for the two hidden layers. This was because I assumed the more neurons, the better the machine would be at learning and training. The reason I used relu was because most the data points were between 0-1 and the ask amount was a number the would go up to how much ever with no limit. That is why I thought relu would be the best call. I trained this model to 25 epochs which is pretty low but it seemed to hit a steady point of 73% accuracy after the 7th epoch level. 
+
+![Screen Shot 2022-10-13 at 12 47 29 PM](https://user-images.githubusercontent.com/105755095/195668953-76e9aa52-f9bb-4c3b-b893-4ec3ad15a236.png)
+
 - Were you able to achieve the target model performance?
+
+The target model performance was to try and get to 75% but with the model I preformed, it never made it over 73%. 
+
+![Screen Shot 2022-10-13 at 12 44 55 PM](https://user-images.githubusercontent.com/105755095/195668427-932821f9-5157-4a81-83ac-4739372ae7a4.png)
+
 - What steps did you take to try and increase model performance?
+
+In order to increase the model's performance, I tried adding more hidden layers. The first thing I did was adding a third hidden layer with 50 neurons in the first, 40 in the second, and 15 in the third. I assumed adding more layers to the model would help it train better and catch more of its mistakes. I also decreased the epochs to 15 instead of 25. 25 seemed redundent in the last model and I figured it was just taking up too much memory on my computer by running for so long. That gave me am accuracy percentage a little less than what I had before. 
+
+The second time around, I tried making the model less busy by taking away some more features. So along witht he EIN and Name columns, I also took out Status and Special Consideration. This was because if the status of the orginazation was 0 then there was no point in considering the organization at all. With special consideration, I felt as though that column was just making the model noisy and the machine should learn without the extra columns. I also added a fourth hidden layer so that the model had an extra moment to catch its mistakes from the previous layers. I gave this layer 5 neurons. I didn't want the machine to learn slower by adding another layer. This gave an accuracy level of 73%. The best from all the tries.
+
+The final time around, I kept the fourth hidden layer and the reduced features set, and added a slower learning rate. I believe by default the learning rate is .01. I changed it to .001 so that it slowed down and caught as much as it could to be able to give a more accurate model. However, this did not do much as the accuracy rate was the lowest at .726. 
+
+![Screen Shot 2022-10-13 at 12 50 40 PM](https://user-images.githubusercontent.com/105755095/195671530-257a7331-ff96-43de-bc6b-7ce172416333.png)
+
 
 ## Summary
